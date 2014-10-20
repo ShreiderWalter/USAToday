@@ -7,10 +7,9 @@
 //
 
 #import "ChoosBarViewController.h"
-#import "SizeableTableViewCell.h"
 
 @interface ChoosBarViewController ()
-
+@property()CGFloat rowHeight;
 @end
 
 @implementation ChoosBarViewController
@@ -21,6 +20,8 @@
     if (self) {
         // Custom initialization
         self.array = [[NSMutableArray alloc] initWithObjects:@"NEWS", @"SPORTS", @"LIFE", @"MONEY", @"TECH", @"TRAVEL", @"OPINION", nil];
+        CGRect screenSize = [[UIScreen mainScreen] bounds];
+        //_rowHeight = screenSize.size.height / 7 - self.navigationController.view.bounds.size.height; //+ screenSize.size.height / 128;
     }
     return self;
 }
@@ -33,7 +34,10 @@
 {
     [super viewDidLoad];
     self.StaticTable.scrollEnabled = FALSE;
+    CGRect screenSize = [[UIScreen mainScreen] bounds];
+    _rowHeight = screenSize.size.height / 7.5; //- self.navigationController.view.bounds.size.height / 7;
     [self.StaticTable setDataSource:self];
+    [self.StaticTable setDelegate:self];
 }
 
 - (void)didReceiveMemoryWarning
@@ -46,30 +50,25 @@
     return 1;
 }
 
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return _rowHeight;
+}
+
 -(NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return [_array count];
 }
 
-
-
--(SizeableTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString * cellIdentifier = @"Cell";
-    SizeableTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
     if(cell == nil){
         //cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
-        cell = [[SizeableTableViewCell alloc] initWithStyle:UITableViewStyleGrouped reuseIdentifier:cellIdentifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewStylePlain reuseIdentifier:cellIdentifier];
     }
     
     cell.textLabel.text = [_array objectAtIndex:indexPath.row];
-    //cell.detailTextLabel.text = @"More text";
-    //cell.imageView.image = [UIImage imageNamed:@"google_images.jpg"];
     
-    
-    //For sizeable cell
-    CGRect frame = [[UIScreen mainScreen] bounds];
-    //frame.size.height = frame.size.height / 7;
-    [cell setFrame:frame];
     
     [cell setBackgroundColor:[UIColor grayColor]];
     UIView * backgroundView = [[UIView alloc] init];
@@ -78,7 +77,5 @@
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     return cell;
 }
-
-
 
 @end

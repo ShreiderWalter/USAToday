@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "MainViewController.h"
+#import "LogoSplash.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) MainViewController * mainViewController;
 @property (strong, nonatomic) UINavigationController * navController;
+@property (strong, nonatomic) LogoSplash * logoSplash;
 @end

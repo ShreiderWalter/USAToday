@@ -24,9 +24,10 @@
 		849C4F5119E70A5700F0F2F2 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 849C4F4F19E70A5700F0F2F2 /* MainViewController.xib */; };
 		849C50CC19F10B5E0057066D /* ChoosBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849C50CA19F10B5E0057066D /* ChoosBarViewController.m */; };
 		849C50CD19F10B5E0057066D /* ChoosBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 849C50CB19F10B5E0057066D /* ChoosBarViewController.xib */; };
-		849C50D819F118600057066D /* SizeableTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 849C50D719F118600057066D /* SizeableTableViewCell.m */; };
 		849D711B19E711C500ADF1F6 /* google_images.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 849D711A19E711C500ADF1F6 /* google_images.jpg */; };
 		84A2954619EC5ECA001A0D96 /* grey_bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 84A2954519EC5ECA001A0D96 /* grey_bar.png */; };
+		84A4202919F553BD0093FB29 /* LogoSplash.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A4202719F553BD0093FB29 /* LogoSplash.m */; };
+		84A4202A19F553BD0093FB29 /* LogoSplash.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84A4202819F553BD0093FB29 /* LogoSplash.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,10 +64,11 @@
 		849C50C919F10B5E0057066D /* ChoosBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoosBarViewController.h; sourceTree = "<group>"; };
 		849C50CA19F10B5E0057066D /* ChoosBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoosBarViewController.m; sourceTree = "<group>"; };
 		849C50CB19F10B5E0057066D /* ChoosBarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChoosBarViewController.xib; sourceTree = "<group>"; };
-		849C50D619F118600057066D /* SizeableTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SizeableTableViewCell.h; sourceTree = "<group>"; };
-		849C50D719F118600057066D /* SizeableTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SizeableTableViewCell.m; sourceTree = "<group>"; };
 		849D711A19E711C500ADF1F6 /* google_images.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = google_images.jpg; path = ../../../../../../Downloads/google_images.jpg; sourceTree = "<group>"; };
 		84A2954519EC5ECA001A0D96 /* grey_bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = grey_bar.png; path = ../../../../../../Downloads/grey_bar.png; sourceTree = "<group>"; };
+		84A4202619F553BD0093FB29 /* LogoSplash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogoSplash.h; sourceTree = "<group>"; };
+		84A4202719F553BD0093FB29 /* LogoSplash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogoSplash.m; sourceTree = "<group>"; };
+		84A4202819F553BD0093FB29 /* LogoSplash.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LogoSplash.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,8 +141,9 @@
 				849C50C919F10B5E0057066D /* ChoosBarViewController.h */,
 				849C50CA19F10B5E0057066D /* ChoosBarViewController.m */,
 				849C50CB19F10B5E0057066D /* ChoosBarViewController.xib */,
-				849C50D619F118600057066D /* SizeableTableViewCell.h */,
-				849C50D719F118600057066D /* SizeableTableViewCell.m */,
+				84A4202619F553BD0093FB29 /* LogoSplash.h */,
+				84A4202719F553BD0093FB29 /* LogoSplash.m */,
+				84A4202819F553BD0093FB29 /* LogoSplash.xib */,
 			);
 			path = USATODAY;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 				849B9C0219ED63AA00970687 /* MainStoryBoard.storyboard in Resources */,
 				849C4F2919E70A3400F0F2F2 /* InfoPlist.strings in Resources */,
 				849C50CD19F10B5E0057066D /* ChoosBarViewController.xib in Resources */,
+				84A4202A19F553BD0093FB29 /* LogoSplash.xib in Resources */,
 				849C4F5119E70A5700F0F2F2 /* MainViewController.xib in Resources */,
 				849D711B19E711C500ADF1F6 /* google_images.jpg in Resources */,
 				849C4F3119E70A3400F0F2F2 /* Images.xcassets in Resources */,
@@ -276,9 +280,9 @@
 			files = (
 				849C4F2F19E70A3400F0F2F2 /* AppDelegate.m in Sources */,
 				849C4F5019E70A5700F0F2F2 /* MainViewController.m in Sources */,
+				84A4202919F553BD0093FB29 /* LogoSplash.m in Sources */,
 				849C4F2B19E70A3400F0F2F2 /* main.m in Sources */,
 				849C50CC19F10B5E0057066D /* ChoosBarViewController.m in Sources */,
-				849C50D819F118600057066D /* SizeableTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

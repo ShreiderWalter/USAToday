@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "MainViewController.h"
+#import "LogoSplash.h"
 
 @implementation AppDelegate
 
@@ -19,9 +20,15 @@
     self.mainViewController = [[MainViewController alloc]
                                initWithNibName:@"MainViewController" bundle:nil];
     self.navController = [[UINavigationController alloc]
-                            initWithRootViewController:self.mainViewController];
-    
+                          initWithRootViewController:self.mainViewController];
     self.window.rootViewController = self.navController;
+    
+    UIImageView * splashScreen = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"google_images.jpg"] ];
+    splashScreen.frame = self.window.bounds;
+    [[self.mainViewController view] addSubview:splashScreen];
+    [[self.mainViewController view] bringSubviewToFront:splashScreen];
+    [UIView transitionWithView:self.window duration:3.0f options:UIViewAnimationOptionTransitionNone animations:^(void){splashScreen.alpha = 0.0f;} completion:^(BOOL finished){[splashScreen removeFromSuperview];} ];
+    
     [self.window makeKeyAndVisible];
     return YES;
 }

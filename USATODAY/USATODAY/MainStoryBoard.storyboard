@@ -4,30 +4,33 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--Reveal View Controller-->
+        <!--Logo Splash-->
         <scene sceneID="wFk-1H-S78">
             <objects>
-                <viewController id="xHY-Ee-626" customClass="SWRevealViewController" sceneMemberID="viewController">
+                <viewController id="xHY-Ee-626" customClass="LogoSplash" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RpZ-R7-EFv"/>
                         <viewControllerLayoutGuide type="bottom" id="WDn-FJ-fIG"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="amI-cR-6UQ" customClass="MainViewCon">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <segue destination="4hS-pd-fOe" kind="push" id="Uf6-TI-GGf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sZw-a0-KNT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="80" y="-68"/>
+            <point key="canvasLocation" x="-58" y="132"/>
         </scene>
         <!--Table View Controller - Root View Controller-->
         <scene sceneID="Pip-is-p77">
             <objects>
                 <tableViewController id="DBo-AJ-PpC" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="lsL-zT-lWc">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -49,12 +52,13 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WBq-Ib-mAX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1077" y="-417"/>
+            <point key="canvasLocation" x="1063" y="-633"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Sl4-b4-wel">
             <objects>
                 <navigationController definesPresentationContext="YES" id="4hS-pd-fOe" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="6JZ-cF-YvE"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gcG-6o-Rft">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -70,6 +74,6 @@
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
 </document>

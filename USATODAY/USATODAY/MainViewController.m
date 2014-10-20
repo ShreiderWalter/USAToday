@@ -8,7 +8,6 @@
 
 #import "MainViewController.h"
 #import "ChoosBarViewController.h"
-#import "SizeableTableViewCell.h"
 
 @interface MainViewController ()
 @property(strong, nonatomic) NSMutableArray * array;
@@ -41,10 +40,15 @@
     //self.title = @"Items";
     self.array = [[NSMutableArray alloc] initWithObjects:@"OBJECT 1", @"OBJECT 2", @"OBJECT 3", nil];
     self.num = 3;
-    UIBarButtonItem * addButton = [[UIBarButtonItem alloc] initWithTitle:@"Add" style:UIBarButtonItemStyleBordered target:self action:@selector(addItemToArray)];
+    
+    NSString *plusSign = @"\U00002795";
+    UIBarButtonItem * addButton = [[UIBarButtonItem alloc] initWithTitle:plusSign style:UIBarButtonItemStylePlain target:self action:@selector(addItemToArray)];
+    [addButton setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor blueColor]} forState:UIControlStateNormal];
     self.navigationItem.rightBarButtonItem = addButton;
     
-    UIBarButtonItem * delButton = [[UIBarButtonItem alloc] initWithTitle:@"Delete" style:UIBarButtonItemStyleBordered target:self action:@selector(delItemFromArray)];
+    
+    NSString *backArrayString = @"\U000025C0\U0000FE0E";
+    UIBarButtonItem * delButton = [[UIBarButtonItem alloc] initWithTitle:backArrayString style:UIBarButtonItemStylePlain target:self action:@selector(delItemFromArray)];
     self.navigationItem.leftBarButtonItem = delButton;
     
     self.navigationController.view.backgroundColor = [UIColor redColor];
@@ -79,6 +83,7 @@
     [self.navigationController pushViewController:obj animated:YES];
 }
 
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -100,7 +105,7 @@
     
     if(cell == nil){
         //cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewStylePlain reuseIdentifier:cellIdentifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     
     cell.textLabel.text = [_array objectAtIndex:indexPath.row];

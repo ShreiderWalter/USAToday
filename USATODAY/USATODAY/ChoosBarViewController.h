@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ChoosBarViewController : UIViewController<UITableViewDataSource>
+@interface ChoosBarViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
 @property(strong, nonatomic) NSMutableArray * array;
 @property (weak, nonatomic) IBOutlet UITableView *DynamicTable;
 @property (weak, nonatomic) IBOutlet UITableView *StaticTable;
