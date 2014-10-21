@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8401E39819F6F45100A3D7E9 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 8401E39719F6F45100A3D7E9 /* Constants.m */; };
 		849B9C0219ED63AA00970687 /* MainStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849B9C0119ED63AA00970687 /* MainStoryBoard.storyboard */; };
 		849C4F1F19E70A3400F0F2F2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849C4F1E19E70A3400F0F2F2 /* Foundation.framework */; };
 		849C4F2119E70A3400F0F2F2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849C4F2019E70A3400F0F2F2 /* CoreGraphics.framework */; };
@@ -41,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8401E39619F6F45100A3D7E9 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		8401E39719F6F45100A3D7E9 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		849B9C0119ED63AA00970687 /* MainStoryBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryBoard.storyboard; sourceTree = "<group>"; };
 		849C4F1B19E70A3400F0F2F2 /* USATODAY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = USATODAY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		849C4F1E19E70A3400F0F2F2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -144,6 +147,8 @@
 				84A4202619F553BD0093FB29 /* LogoSplash.h */,
 				84A4202719F553BD0093FB29 /* LogoSplash.m */,
 				84A4202819F553BD0093FB29 /* LogoSplash.xib */,
+				8401E39619F6F45100A3D7E9 /* Constants.h */,
+				8401E39719F6F45100A3D7E9 /* Constants.m */,
 			);
 			path = USATODAY;
 			sourceTree = "<group>";
@@ -283,6 +288,7 @@
 				84A4202919F553BD0093FB29 /* LogoSplash.m in Sources */,
 				849C4F2B19E70A3400F0F2F2 /* main.m in Sources */,
 				849C50CC19F10B5E0057066D /* ChoosBarViewController.m in Sources */,
+				8401E39819F6F45100A3D7E9 /* Constants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

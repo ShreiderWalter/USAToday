@@ -6,8 +6,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChoosBarViewController">
             <connections>
-                <outlet property="DynamicTable" destination="IRM-PR-c6z" id="DI5-Ip-6DT"/>
                 <outlet property="StaticTable" destination="XRW-JS-8Ur" id="25n-wx-fJg"/>
+                <outlet property="dynamicTable" destination="IRM-PR-c6z" id="GEX-Rz-KGU"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,12 +17,12 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="XRW-JS-8Ur">
-                    <rect key="frame" x="0.0" y="0.0" width="191" height="578"/>
+                    <rect key="frame" x="0.0" y="0.0" width="194" height="578"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="IRM-PR-c6z">
-                    <rect key="frame" x="199" y="0.0" width="160" height="568"/>
+                    <rect key="frame" x="124" y="0.0" width="274" height="568"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
