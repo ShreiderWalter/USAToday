@@ -12,6 +12,8 @@
 
 @implementation AppDelegate
 
+UIImageView * splashScreen;
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
@@ -23,14 +25,23 @@
                           initWithRootViewController:self.mainViewController];
     self.window.rootViewController = self.navController;
     
-    UIImageView * splashScreen = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"google_images.jpg"] ];
+    splashScreen = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"usa_today_logo.png"] ];
     splashScreen.frame = self.window.bounds;
     [[self.mainViewController view] addSubview:splashScreen];
     [[self.mainViewController view] bringSubviewToFront:splashScreen];
-    [UIView transitionWithView:self.window duration:3.0f options:UIViewAnimationOptionTransitionNone animations:^(void){splashScreen.alpha = 0.0f;} completion:^(BOOL finished){[splashScreen removeFromSuperview];} ];
+    //[UIView transitionWithView:self.window duration:3.0f options:UIViewAnimationOptionTransitionNone animations:^(void){splashScreen.alpha = 1.0f;} completion:^(BOOL finished){[splashScreen removeFromSuperview];} ];
+    NSDate * d = [NSDate dateWithTimeIntervalSinceNow: 4.0];
+    NSTimer * t = [[NSTimer alloc] initWithFireDate: d interval: 1 target: self selector:@selector(onTick:) userInfo:nil repeats:YES];
+    NSRunLoop *runner = [NSRunLoop currentRunLoop];
+    [runner addTimer:t forMode: NSDefaultRunLoopMode];
+    
     
     [self.window makeKeyAndVisible];
     return YES;
+}
+
+-(void)onTick:(NSTimer *)timer{
+    [splashScreen removeFromSuperview];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

@@ -27,12 +27,11 @@
 @property (weak, nonatomic) IBOutlet UITableView *StaticTable;
 @property (weak, nonatomic) IBOutlet UITableView *dynamicTable;
 -(UIColor *)colorFromHexString;
-
-
 @end
 
 @interface SubViewTableController : NSObject<UITableViewDelegate, UITableViewDataSource>
 @property(strong, nonatomic) NSMutableArray * array;
 @property(strong, nonatomic) UIColor * cellColor;
 @property() CGFloat rowHeight;
+@property() UINavigationController * currentNavController;
 @end

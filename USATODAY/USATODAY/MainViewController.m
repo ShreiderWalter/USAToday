@@ -41,22 +41,33 @@
     self.array = [[NSMutableArray alloc] initWithObjects:@"OBJECT 1", @"OBJECT 2", @"OBJECT 3", nil];
     self.num = 3;
     
-    NSString *plusSign = @"\U00002795";
+    NSString * plusSign = @"\U00002795";
     UIBarButtonItem * addButton = [[UIBarButtonItem alloc] initWithTitle:plusSign style:UIBarButtonItemStylePlain target:self action:@selector(addItemToArray)];
     [addButton setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor blueColor]} forState:UIControlStateNormal];
     self.navigationItem.rightBarButtonItem = addButton;
     
     
-    NSString *backArrayString = @"\U000025C0\U0000FE0E";
+    NSString * backArrayString = @"\U000025C0\U0000FE0E";
     UIBarButtonItem * delButton = [[UIBarButtonItem alloc] initWithTitle:backArrayString style:UIBarButtonItemStylePlain target:self action:@selector(delItemFromArray)];
     self.navigationItem.leftBarButtonItem = delButton;
     
-    self.navigationController.view.backgroundColor = [UIColor redColor];
+    //self.navigationController.view.backgroundColor = [UIColor redColor];
     
     [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"grey_bar.png"] forBarMetrics:UIBarMetricsDefault];
+    [[self navigationController] setNavigationBarHidden:TRUE animated:NO];
+    
+    NSDate * d = [NSDate dateWithTimeIntervalSinceNow: 4.0];
+    NSTimer * t = [[NSTimer alloc] initWithFireDate: d interval: 1 target: self selector:@selector(onTick:) userInfo:nil repeats:YES];
+    
+    NSRunLoop *runner = [NSRunLoop currentRunLoop];
+    [runner addTimer:t forMode: NSDefaultRunLoopMode];
     
     [self.tableList setDataSource:self];
     [self.tableList setDelegate:self];
+}
+
+-(void)onTick:(NSTimer *)timer{
+    [[self navigationController] setNavigationBarHidden:FALSE animated:TRUE];
 }
 
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView{

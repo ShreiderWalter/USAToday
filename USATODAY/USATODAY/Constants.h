@@ -10,14 +10,25 @@
 
 @interface Constants : NSObject
 
-//Main Table View Static
-extern NSString * const NEWS;
-extern NSString * const SPORT;
-extern NSString * const LIFE;
-extern NSString * const MONEY;
-extern NSString * const TECH;
-extern NSString * const TRAVEL;
-extern NSString * const OPINION;
+//Main Array
+@property()NSMutableArray * CELLS_Description;
 
+//Main Table View Static
++(NSString *) getNews;
++(NSString *) getSport;
++(NSString *) getLife;
++(NSString *) getMoney;
++(NSString *) getTech;
++(NSString *) getTravel;
++(NSString *) getOpinion;
+
+//Colors hex
++(NSString *) getNewsColor;
++(NSString *) getSportColor;
++(NSString *) getLifeColor;
++(NSString *) getMoneyColor;
++(NSString *) getTechColor;
++(NSString *) getTravelColor;
++(NSString *) getOpinionColor;
 
 @end
