@@ -190,7 +190,7 @@ static NSArray * OPINION_CELL;
     SpecificViewController * obj = [[SpecificViewController alloc] init];
     //[choose.navigationController pushViewController:obj animated:NO];
     
-    [_currentNavController pushViewController:obj animated:NO];
+    [_currentNavController pushViewController:obj animated:YES];
 }
 
 @end

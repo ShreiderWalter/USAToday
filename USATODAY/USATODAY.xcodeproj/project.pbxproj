@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		8401E39819F6F45100A3D7E9 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 8401E39719F6F45100A3D7E9 /* Constants.m */; };
+		849C0EC819FE7E6B00DFDFA0 /* SubArticle.m in Sources */ = {isa = PBXBuildFile; fileRef = 849C0EC719FE7E6B00DFDFA0 /* SubArticle.m */; };
+		849C0ECF19FE853400DFDFA0 /* USATodayCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 849C0ECE19FE853400DFDFA0 /* USATodayCommunicator.m */; };
+		849C0ED219FE8AD200DFDFA0 /* GroupBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 849C0ED119FE8AD200DFDFA0 /* GroupBuilder.m */; };
+		849C0ED519FE913000DFDFA0 /* USATodayManagerDelagate.m in Sources */ = {isa = PBXBuildFile; fileRef = 849C0ED419FE913000DFDFA0 /* USATodayManagerDelagate.m */; };
+		849C0ED819FE921C00DFDFA0 /* USATodayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 849C0ED719FE921C00DFDFA0 /* USATodayManager.m */; };
 		849C4F1F19E70A3400F0F2F2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849C4F1E19E70A3400F0F2F2 /* Foundation.framework */; };
 		849C4F2119E70A3400F0F2F2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849C4F2019E70A3400F0F2F2 /* CoreGraphics.framework */; };
 		849C4F2319E70A3400F0F2F2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849C4F2219E70A3400F0F2F2 /* UIKit.framework */; };
@@ -47,6 +52,17 @@
 /* Begin PBXFileReference section */
 		8401E39619F6F45100A3D7E9 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		8401E39719F6F45100A3D7E9 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		849C0EC619FE7E6B00DFDFA0 /* SubArticle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubArticle.h; sourceTree = "<group>"; };
+		849C0EC719FE7E6B00DFDFA0 /* SubArticle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubArticle.m; sourceTree = "<group>"; };
+		849C0ECC19FE82B000DFDFA0 /* USATodayCommunicatorDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = USATodayCommunicatorDelegate.h; sourceTree = "<group>"; };
+		849C0ECD19FE853400DFDFA0 /* USATodayCommunicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USATodayCommunicator.h; sourceTree = "<group>"; };
+		849C0ECE19FE853400DFDFA0 /* USATodayCommunicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USATodayCommunicator.m; sourceTree = "<group>"; };
+		849C0ED019FE8AD200DFDFA0 /* GroupBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupBuilder.h; sourceTree = "<group>"; };
+		849C0ED119FE8AD200DFDFA0 /* GroupBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupBuilder.m; sourceTree = "<group>"; };
+		849C0ED319FE913000DFDFA0 /* USATodayManagerDelagate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USATodayManagerDelagate.h; sourceTree = "<group>"; };
+		849C0ED419FE913000DFDFA0 /* USATodayManagerDelagate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USATodayManagerDelagate.m; sourceTree = "<group>"; };
+		849C0ED619FE921C00DFDFA0 /* USATodayManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USATodayManager.h; sourceTree = "<group>"; };
+		849C0ED719FE921C00DFDFA0 /* USATodayManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USATodayManager.m; sourceTree = "<group>"; };
 		849C4F1B19E70A3400F0F2F2 /* USATODAY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = USATODAY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		849C4F1E19E70A3400F0F2F2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		849C4F2019E70A3400F0F2F2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -140,11 +156,11 @@
 			children = (
 				84A32C8B19FC223900035DC4 /* MainStoryboard.storyboard */,
 				849D711A19E711C500ADF1F6 /* google_images.jpg */,
+				849C4F3019E70A3400F0F2F2 /* Images.xcassets */,
 				84A32C8D19FD743500035DC4 /* usa_today_logo.png */,
 				84A2954519EC5ECA001A0D96 /* grey_bar.png */,
 				849C4F2D19E70A3400F0F2F2 /* AppDelegate.h */,
 				849C4F2E19E70A3400F0F2F2 /* AppDelegate.m */,
-				849C4F3019E70A3400F0F2F2 /* Images.xcassets */,
 				849C4F2519E70A3400F0F2F2 /* Supporting Files */,
 				849C4F4D19E70A5700F0F2F2 /* MainViewController.h */,
 				849C4F4E19E70A5700F0F2F2 /* MainViewController.m */,
@@ -160,6 +176,17 @@
 				84A32C8619FC1FF700035DC4 /* SpecificViewController.h */,
 				84A32C8719FC1FF700035DC4 /* SpecificViewController.m */,
 				84A32C8819FC1FF700035DC4 /* SpecificViewController.xib */,
+				849C0EC619FE7E6B00DFDFA0 /* SubArticle.h */,
+				849C0EC719FE7E6B00DFDFA0 /* SubArticle.m */,
+				849C0ECC19FE82B000DFDFA0 /* USATodayCommunicatorDelegate.h */,
+				849C0ECD19FE853400DFDFA0 /* USATodayCommunicator.h */,
+				849C0ECE19FE853400DFDFA0 /* USATodayCommunicator.m */,
+				849C0ED019FE8AD200DFDFA0 /* GroupBuilder.h */,
+				849C0ED119FE8AD200DFDFA0 /* GroupBuilder.m */,
+				849C0ED619FE921C00DFDFA0 /* USATodayManager.h */,
+				849C0ED719FE921C00DFDFA0 /* USATodayManager.m */,
+				849C0ED319FE913000DFDFA0 /* USATodayManagerDelagate.h */,
+				849C0ED419FE913000DFDFA0 /* USATodayManagerDelagate.m */,
 			);
 			path = USATODAY;
 			sourceTree = "<group>";
@@ -297,12 +324,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				849C4F2F19E70A3400F0F2F2 /* AppDelegate.m in Sources */,
+				849C0ECF19FE853400DFDFA0 /* USATodayCommunicator.m in Sources */,
 				849C4F5019E70A5700F0F2F2 /* MainViewController.m in Sources */,
 				84A4202919F553BD0093FB29 /* LogoSplash.m in Sources */,
+				849C0ED519FE913000DFDFA0 /* USATodayManagerDelagate.m in Sources */,
 				84A32C8919FC1FF700035DC4 /* SpecificViewController.m in Sources */,
 				849C4F2B19E70A3400F0F2F2 /* main.m in Sources */,
+				849C0EC819FE7E6B00DFDFA0 /* SubArticle.m in Sources */,
 				849C50CC19F10B5E0057066D /* ChoosBarViewController.m in Sources */,
+				849C0ED819FE921C00DFDFA0 /* USATodayManager.m in Sources */,
 				8401E39819F6F45100A3D7E9 /* Constants.m in Sources */,
+				849C0ED219FE8AD200DFDFA0 /* GroupBuilder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
