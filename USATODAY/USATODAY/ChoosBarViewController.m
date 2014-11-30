@@ -9,6 +9,7 @@
 #import "ChoosBarViewController.h"
 #import "Constants.h"
 #import "SpecificViewController.h"
+#import "MainViewController.h"
 
 @interface ChoosBarViewController ()
 @property()CGFloat rowHeight;
@@ -38,21 +39,21 @@ static NSArray * OPINION_CELL;
         // Custom initialization
         
         
-        NEWS_CELL = [[NSArray alloc] initWithObjects:[NSString stringWithFormat:@"Weather"], [NSString stringWithFormat:@"Snapshot Polls"], [NSString stringWithFormat:@"Nation"], [NSString stringWithFormat:@"Elections"], [NSString stringWithFormat:@"World"], [NSString stringWithFormat:@"Washington"], nil];
+        NEWS_CELL = [[NSArray alloc] initWithObjects:/*[NSString stringWithFormat:@"Weather"], [NSString stringWithFormat:@"Snapshot Polls"],*/ [NSString stringWithFormat:@"Nation"], /*[NSString stringWithFormat:@"Elections"],*/ [NSString stringWithFormat:@"World"], /*[NSString stringWithFormat:@"Washington"],*/ nil];
         
         
-        SPORT_CELL = [[NSArray alloc] initWithObjects:[NSString stringWithFormat:@"Scores"], [NSString stringWithFormat:@"Day in Sports"], [NSString stringWithFormat:@"NFL"], [NSString stringWithFormat:@"NCAAF"], [NSString stringWithFormat:@"NCAAB"], [NSString stringWithFormat:@"MLB"], [NSString stringWithFormat:@"NBA"], [NSString stringWithFormat:@"NHL"], [NSString stringWithFormat:@"NASCAR"], [NSString stringWithFormat:@"UFC"], [NSString stringWithFormat:@"Golf"], [NSString stringWithFormat:@"Tennis"], [NSString stringWithFormat:@"Soccer"], [NSString stringWithFormat:@"Boxing"], [NSString stringWithFormat:@"Motor Sports"], nil];
+        SPORT_CELL = [[NSArray alloc] initWithObjects:/*[NSString stringWithFormat:@"Scores"], [NSString stringWithFormat:@"Day in Sports"],*/ [NSString stringWithFormat:@"NFL"], /*[NSString stringWithFormat:@"NCAAF"], [NSString stringWithFormat:@"NCAAB"],*/ [NSString stringWithFormat:@"MLB"], [NSString stringWithFormat:@"NBA"], [NSString stringWithFormat:@"NHL"], /*[NSString stringWithFormat:@"NASCAR"], [NSString stringWithFormat:@"UFC"],*/ [NSString stringWithFormat:@"Golf"], /*[NSString stringWithFormat:@"Tennis"],*/ [NSString stringWithFormat:@"Soccer"], /*[NSString stringWithFormat:@"Boxing"],*/ [NSString stringWithFormat:@"Motor Sports"], nil];
         
-        LIFE_CELL = [[NSArray alloc] initWithObjects:[NSString stringWithFormat:@"Day in Celebrities"], [NSString stringWithFormat:@"Snapshot Polls"], [NSString stringWithFormat:@"People"], [NSString stringWithFormat:@"Movies"], [NSString stringWithFormat:@"Music"], [NSString stringWithFormat:@"TV"], [NSString stringWithFormat:@"Books"], nil];
+        LIFE_CELL = [[NSArray alloc] initWithObjects:/*[NSString stringWithFormat:@"Day in Celebrities"], [NSString stringWithFormat:@"Snapshot Polls"],*/ [NSString stringWithFormat:@"People"], /*[NSString stringWithFormat:@"Movies"],*/ [NSString stringWithFormat:@"Music"], /*[NSString stringWithFormat:@"TV"],*/ [NSString stringWithFormat:@"Books"], nil];
         
         
-        MONEY_CELL = [[NSArray alloc] initWithObjects:[NSString stringWithFormat:@"Top Stories"], [NSString stringWithFormat:@"Portfolio Tracker"], [NSString stringWithFormat:@"Snapshot Polls"], [NSString stringWithFormat:@"Business"], [NSString stringWithFormat:@"Personal Finance"], [NSString stringWithFormat:@"Cars"], nil];
+        MONEY_CELL = [[NSArray alloc] initWithObjects:[NSString stringWithFormat:@"Top Stories"], /*[NSString stringWithFormat:@"Portfolio Tracker"], [NSString stringWithFormat:@"Snapshot Polls"], [NSString stringWithFormat:@"Business"], [NSString stringWithFormat:@"Personal Finance"], [NSString stringWithFormat:@"Cars"],*/ nil];
         
-        TECH_CELL = [[NSArray alloc] initWithObjects:[NSString stringWithFormat:@"Top Stories"], [NSString stringWithFormat:@"Personal Tech"], [NSString stringWithFormat:@"Gaming"], nil];
+        TECH_CELL = [[NSArray alloc] initWithObjects:[NSString stringWithFormat:@"Top Stories"], /*[NSString stringWithFormat:@"Personal Tech"], [NSString stringWithFormat:@"Gaming"],*/ nil];
         
-        TRAVEL_CELL = [[NSArray alloc] initWithObjects:[NSString stringWithFormat:@"Top Stories"], [NSString stringWithFormat:@"Week In Travel"], [NSString stringWithFormat:@"Destinations"], [NSString stringWithFormat:@"Flights"], [NSString stringWithFormat:@"Cruises"], [NSString stringWithFormat:@"Hotel"], nil];
+        TRAVEL_CELL = [[NSArray alloc] initWithObjects:[NSString stringWithFormat:@"Top Stories"], /*[NSString stringWithFormat:@"Week In Travel"], [NSString stringWithFormat:@"Destinations"], [NSString stringWithFormat:@"Flights"], [NSString stringWithFormat:@"Cruises"], [NSString stringWithFormat:@"Hotel"],*/ nil];
         
-        OPINION_CELL = [[NSArray alloc] initWithObjects:[NSString stringWithFormat:@"Top Stories"], [NSString stringWithFormat:@"Editorial Cartoons"], nil];
+        OPINION_CELL = [[NSArray alloc] initWithObjects:[NSString stringWithFormat:@"Top Stories"], /*[NSString stringWithFormat:@"Editorial Cartoons"],*/ nil];
         
         COPY_OF_CELLS = [[NSMutableArray alloc] initWithObjects:NEWS_CELL, SPORT_CELL, LIFE_CELL, MONEY_CELL, TECH_CELL, TRAVEL_CELL, OPINION_CELL, nil];
         
@@ -187,9 +188,8 @@ static NSArray * OPINION_CELL;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    SpecificViewController * obj = [[SpecificViewController alloc] init];
-    //[choose.navigationController pushViewController:obj animated:NO];
-    
+    MainViewController * obj = [[MainViewController alloc] init];
+    obj.category = [[_array objectAtIndex:indexPath.row] lowercaseString];
     [_currentNavController pushViewController:obj animated:YES];
 }
 

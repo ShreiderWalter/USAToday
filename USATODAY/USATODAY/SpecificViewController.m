@@ -35,6 +35,7 @@
     screenRect.size.height = screenRect.size.height / 3;
     self.mainImageView.image = viewImage;
     [self.mainImageView setFrame:screenRect];
+    [_textView setEditable:NO];
 }
 
 - (void)didReceiveMemoryWarning

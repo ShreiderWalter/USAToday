@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface SpecificViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UITextView *textView;
 @property (weak, nonatomic) IBOutlet UIImageView *mainImageView;
 
 @end
