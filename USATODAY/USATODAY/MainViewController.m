@@ -19,6 +19,7 @@
 @interface MainViewController (){
     NSArray * _articles;
     USAManager * _manager;
+    UIActivityIndicatorView * activityView;
 }
 @property(strong, nonatomic) NSMutableArray * array;
 @property (nonatomic)int num;
@@ -33,7 +34,18 @@
     if (self) {
         // Custom initialization
         _category = @"home";
-        NSLog(@"Error %@CONSTRUCTOR CALL SUCCEED!!!");
+        NSString * plusSign = @"\U00002795";
+        UIBarButtonItem * addButton = [[UIBarButtonItem alloc] initWithTitle:plusSign style:UIBarButtonItemStylePlain target:self action:@selector(addItemToArray)];
+        [addButton setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor blueColor]} forState:UIControlStateNormal];
+        self.navigationItem.rightBarButtonItem = addButton;
+        
+        
+        NSString * backArrayString = @"\U000025C0\U0000FE0E";
+        UIBarButtonItem * delButton = [[UIBarButtonItem alloc] initWithTitle:backArrayString style:UIBarButtonItemStylePlain target:self action:@selector(delItemFromArray)];
+        self.navigationItem.leftBarButtonItem = delButton;
+        
+        [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"grey_bar.png"] forBarMetrics:UIBarMetricsDefault];
+        [[self navigationController] setNavigationBarHidden:YES animated:NO];
     }
     return self;
 }
@@ -42,6 +54,7 @@
     _articles = articles;
     UIImage * viewImage = [[_articles objectAtIndex:0] image];
     dispatch_async(	dispatch_get_main_queue(), ^{
+        [activityView stopAnimating];
         self.mainImageView.image = viewImage;
        [self.tableList reloadData];
     });
@@ -54,13 +67,28 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    if(![self.navigationController isNavigationBarHidden]){
+        [[self navigationController] setNavigationBarHidden:YES animated:NO];
+    }
+    
+    activityView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    activityView.center = self.view.center;
+    activityView.color = [UIColor blueColor];
+    activityView.tag = 17;
+    activityView.hidesWhenStopped = YES;
+    [activityView startAnimating];
+    [self.view addSubview:activityView];
+    //[self.view bringSubviewToFront:activityView];
     
     _manager = [[USAManager alloc] init];
     _manager.communicator = [[USACommunicator alloc] init];
     _manager.communicator.delegate = _manager;
     _manager.delegate = self;
-    //_category = @"home";
-    [_manager fetchArticles:20 a:_category];
+    if(_category == nil){
+        _category = @"home";
+    }
+    
+    [_manager fetchArticles:10 a:_category];
     
     //[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(startFetchingGroups:) name:@"TestNotification" object:nil];
     
@@ -70,20 +98,6 @@
     //self.mainImageView.image = viewImage;
     [self.mainImageView setFrame:screenRect];
     
-    NSString * plusSign = @"\U00002795";
-    UIBarButtonItem * addButton = [[UIBarButtonItem alloc] initWithTitle:plusSign style:UIBarButtonItemStylePlain target:self action:@selector(addItemToArray)];
-    [addButton setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor blueColor]} forState:UIControlStateNormal];
-    self.navigationItem.rightBarButtonItem = addButton;
-    
-    
-    NSString * backArrayString = @"\U000025C0\U0000FE0E";
-    UIBarButtonItem * delButton = [[UIBarButtonItem alloc] initWithTitle:backArrayString style:UIBarButtonItemStylePlain target:self action:@selector(delItemFromArray)];
-    self.navigationItem.leftBarButtonItem = delButton;
-    
-    //self.navigationController.view.backgroundColor = [UIColor redColor];
-    
-    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"grey_bar.png"] forBarMetrics:UIBarMetricsDefault];
-    [[self navigationController] setNavigationBarHidden:TRUE animated:NO];
     
     NSDate * d = [NSDate dateWithTimeIntervalSinceNow: 4.0];
     NSTimer * t = [[NSTimer alloc] initWithFireDate: d interval: 1 target: self selector:@selector(onTick:) userInfo:nil repeats:YES];
@@ -152,6 +166,7 @@
     Article * article = _articles[indexPath.row];
     
     [cell.titleTextView setText:article.title];
+    
     //[cell.descriptionLabel setText:article.description];
     //NSData * imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://www.gannett-cdn.com/-mm-/5ec1ae5df5882aa4d086029417cfb91f4e678de1/c=31-271-927-945&r=x404&c=534x401/local/-/media/USATODAY/USATODAY/2014/11/24/635524032122310361-XXX-Tamir.jpg"]];
     //[cell.thumbnailImageView setImage:[UIImage imageWithData:imageData]];
@@ -166,7 +181,7 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     SpecificViewController * obj = [[SpecificViewController alloc] init];
-    
+    obj.currentArticle = [_articles objectAtIndex:indexPath.row];
     [self.navigationController pushViewController:obj animated:YES];
 }
 

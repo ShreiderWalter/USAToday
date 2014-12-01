@@ -188,7 +188,7 @@ static NSArray * OPINION_CELL;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    MainViewController * obj = [[MainViewController alloc] init];
+    MainViewController * obj = [[MainViewController alloc] initWithNibName:@"MainViewController" bundle:nil];
     obj.category = [[_array objectAtIndex:indexPath.row] lowercaseString];
     [_currentNavController pushViewController:obj animated:YES];
 }

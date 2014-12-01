@@ -8,7 +8,9 @@
 
 #import "SpecificViewController.h"
 
-@interface SpecificViewController ()
+@interface SpecificViewController (){
+    UIImage * viewImage;
+}
 
 @end
 
@@ -30,7 +32,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    UIImage * viewImage = [UIImage imageNamed:@"google_images.jpg"];
+    
+    if(_currentArticle == nil){
+        viewImage = [UIImage imageNamed:@"google_images.jpg"];
+    } else {
+        viewImage = _currentArticle.image;
+        [_textView setText:_currentArticle.text];
+    }
+    
     CGRect screenRect = [[UIScreen mainScreen] bounds];
     screenRect.size.height = screenRect.size.height / 3;
     self.mainImageView.image = viewImage;

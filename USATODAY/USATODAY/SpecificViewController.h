@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Article.h"
 
 @interface SpecificViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 @property (weak, nonatomic) IBOutlet UIImageView *mainImageView;
 
+@property(strong, nonatomic) Article * currentArticle;;
 @end
