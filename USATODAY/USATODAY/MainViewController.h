@@ -14,4 +14,6 @@
 @property (strong, nonatomic) IBOutlet UITableView *tableList;
 @property() UINavigationController * currentNavController;
 @property(nonatomic) NSString * category;
+
+-(UIColor *)colorFromHexString:(NSString *)hexToUse;
 @end

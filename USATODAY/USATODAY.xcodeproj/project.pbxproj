@@ -24,7 +24,6 @@
 		849C4F5119E70A5700F0F2F2 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 849C4F4F19E70A5700F0F2F2 /* MainViewController.xib */; };
 		849C50CC19F10B5E0057066D /* ChoosBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849C50CA19F10B5E0057066D /* ChoosBarViewController.m */; };
 		849C50CD19F10B5E0057066D /* ChoosBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 849C50CB19F10B5E0057066D /* ChoosBarViewController.xib */; };
-		849D711B19E711C500ADF1F6 /* google_images.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 849D711A19E711C500ADF1F6 /* google_images.jpg */; };
 		849F2A941A23680100242136 /* SimpleTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 849F2A931A23680100242136 /* SimpleTableCell.xib */; };
 		849F2A971A236A4B00242136 /* SimpleTableCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 849F2A961A236A4B00242136 /* SimpleTableCellTableViewCell.m */; };
 		84A175531A21DBE40018EBF6 /* Article.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A175521A21DBE40018EBF6 /* Article.m */; };
@@ -40,6 +39,10 @@
 		84A32C8E19FD743500035DC4 /* usa_today_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 84A32C8D19FD743500035DC4 /* usa_today_logo.png */; };
 		84A4202919F553BD0093FB29 /* LogoSplash.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A4202719F553BD0093FB29 /* LogoSplash.m */; };
 		84A4202A19F553BD0093FB29 /* LogoSplash.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84A4202819F553BD0093FB29 /* LogoSplash.xib */; };
+		84A9EDEE1A2E41ED0084532E /* google_images.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84A9EDED1A2E41ED0084532E /* google_images.jpg */; };
+		84A9EDF01A2E420F0084532E /* usa_today_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 84A9EDEF1A2E420F0084532E /* usa_today_logo.png */; };
+		84A9EDF21A2E42220084532E /* solid_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 84A9EDF11A2E42220084532E /* solid_white.png */; };
+		84A9EDF61A2E43050084532E /* MainStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84A9EDF51A2E43050084532E /* MainStoryBoard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,7 +80,6 @@
 		849C50C919F10B5E0057066D /* ChoosBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoosBarViewController.h; sourceTree = "<group>"; };
 		849C50CA19F10B5E0057066D /* ChoosBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoosBarViewController.m; sourceTree = "<group>"; };
 		849C50CB19F10B5E0057066D /* ChoosBarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChoosBarViewController.xib; sourceTree = "<group>"; };
-		849D711A19E711C500ADF1F6 /* google_images.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = google_images.jpg; path = ../../../../../../Downloads/google_images.jpg; sourceTree = "<group>"; };
 		849F2A931A23680100242136 /* SimpleTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimpleTableCell.xib; sourceTree = "<group>"; };
 		849F2A951A236A4B00242136 /* SimpleTableCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleTableCellTableViewCell.h; sourceTree = "<group>"; };
 		849F2A961A236A4B00242136 /* SimpleTableCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleTableCellTableViewCell.m; sourceTree = "<group>"; };
@@ -104,6 +106,10 @@
 		84A4202619F553BD0093FB29 /* LogoSplash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogoSplash.h; sourceTree = "<group>"; };
 		84A4202719F553BD0093FB29 /* LogoSplash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogoSplash.m; sourceTree = "<group>"; };
 		84A4202819F553BD0093FB29 /* LogoSplash.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LogoSplash.xib; sourceTree = "<group>"; };
+		84A9EDED1A2E41ED0084532E /* google_images.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = google_images.jpg; path = ../../../../../USAToday/USAToday/google_images.jpg; sourceTree = "<group>"; };
+		84A9EDEF1A2E420F0084532E /* usa_today_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = usa_today_logo.png; path = ../../../../../USAToday/USAToday/usa_today_logo.png; sourceTree = "<group>"; };
+		84A9EDF11A2E42220084532E /* solid_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = solid_white.png; path = ../../../../../USAToday/USAToday/solid_white.png; sourceTree = "<group>"; };
+		84A9EDF51A2E43050084532E /* MainStoryBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryBoard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,7 +171,9 @@
 		849C4F2419E70A3400F0F2F2 /* USATODAY */ = {
 			isa = PBXGroup;
 			children = (
-				849D711A19E711C500ADF1F6 /* google_images.jpg */,
+				84A9EDF11A2E42220084532E /* solid_white.png */,
+				84A9EDEF1A2E420F0084532E /* usa_today_logo.png */,
+				84A9EDED1A2E41ED0084532E /* google_images.jpg */,
 				849C4F3019E70A3400F0F2F2 /* Images.xcassets */,
 				84A32C8D19FD743500035DC4 /* usa_today_logo.png */,
 				84A2954519EC5ECA001A0D96 /* grey_bar.png */,
@@ -203,6 +211,7 @@
 				84A21E2F1A2CD675009099BE /* HTMLNode.m */,
 				84A21E311A2CD767009099BE /* HTMLParser.h */,
 				84A21E321A2CD767009099BE /* HTMLParser.m */,
+				84A9EDF51A2E43050084532E /* MainStoryBoard.storyboard */,
 			);
 			path = USATODAY;
 			sourceTree = "<group>";
@@ -311,16 +320,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84A9EDEE1A2E41ED0084532E /* google_images.jpg in Resources */,
 				849C4F2919E70A3400F0F2F2 /* InfoPlist.strings in Resources */,
 				84A32C8A19FC1FF700035DC4 /* SpecificViewController.xib in Resources */,
 				849C50CD19F10B5E0057066D /* ChoosBarViewController.xib in Resources */,
 				849F2A941A23680100242136 /* SimpleTableCell.xib in Resources */,
 				84A4202A19F553BD0093FB29 /* LogoSplash.xib in Resources */,
+				84A9EDF01A2E420F0084532E /* usa_today_logo.png in Resources */,
 				84A32C8E19FD743500035DC4 /* usa_today_logo.png in Resources */,
 				849C4F5119E70A5700F0F2F2 /* MainViewController.xib in Resources */,
-				849D711B19E711C500ADF1F6 /* google_images.jpg in Resources */,
+				84A9EDF21A2E42220084532E /* solid_white.png in Resources */,
 				849C4F3119E70A3400F0F2F2 /* Images.xcassets in Resources */,
 				84A2954619EC5ECA001A0D96 /* grey_bar.png in Resources */,
+				84A9EDF61A2E43050084532E /* MainStoryBoard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

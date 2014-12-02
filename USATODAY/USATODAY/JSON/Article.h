@@ -16,4 +16,5 @@
 @property(strong, nonatomic) UIImage * image;
 
 @property(strong, nonatomic) NSString * text;
+@property(strong, nonatomic) NSString * categoryImage;
 @end

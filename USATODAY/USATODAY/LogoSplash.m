@@ -19,7 +19,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        _logoImage = [UIImage imageNamed:@"google_images.jpg"];
+        [_logoImage setImage:[UIImage imageNamed:@"google_images.jpg"] ];
     }
     return self;
 }

@@ -44,7 +44,7 @@
         UIBarButtonItem * delButton = [[UIBarButtonItem alloc] initWithTitle:backArrayString style:UIBarButtonItemStylePlain target:self action:@selector(delItemFromArray)];
         self.navigationItem.leftBarButtonItem = delButton;
         
-        [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"grey_bar.png"] forBarMetrics:UIBarMetricsDefault];
+        [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"solid_white.png"] forBarMetrics:UIBarMetricsDefault];
         [[self navigationController] setNavigationBarHidden:YES animated:NO];
     }
     return self;
@@ -92,7 +92,7 @@
     
     //[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(startFetchingGroups:) name:@"TestNotification" object:nil];
     
-    UIImage * viewImage = [[_articles objectAtIndex:0] image];//[UIImage imageNamed:@"google_images.jpg"];
+    //UIImage * viewImage = [[_articles objectAtIndex:0] image];//[UIImage imageNamed:@"google_images.jpg"];
     CGRect screenRect = [[UIScreen mainScreen] bounds];
     screenRect.size.height = screenRect.size.height / 3;
     //self.mainImageView.image = viewImage;
@@ -167,9 +167,6 @@
     
     [cell.titleTextView setText:article.title];
     
-    //[cell.descriptionLabel setText:article.description];
-    //NSData * imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://www.gannett-cdn.com/-mm-/5ec1ae5df5882aa4d086029417cfb91f4e678de1/c=31-271-927-945&r=x404&c=534x401/local/-/media/USATODAY/USATODAY/2014/11/24/635524032122310361-XXX-Tamir.jpg"]];
-    //[cell.thumbnailImageView setImage:[UIImage imageWithData:imageData]];
     [cell.thumbnailImageView setImage:article.image];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     return cell;

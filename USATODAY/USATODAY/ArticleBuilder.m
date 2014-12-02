@@ -60,7 +60,6 @@
         NSArray  * inputNodes = [bodyNode findChildTags:@"div"];
         
         HTMLNode * articleDiv;
-        
         for(HTMLNode * inputNode in inputNodes){
             if([[inputNode getAttributeNamed:@"itemprop"] isEqualToString:@"articleBody"]){
                 articleDiv = inputNode;
@@ -87,19 +86,20 @@
             //NSLog(@"%@", [inputNode getAttributeNamed:@"src"]);
         }
         
-        if([currentImgTags count] > 0){
-            NSURL * imgUrl = [NSURL URLWithString:[currentImgTags objectAtIndex:0]];
-            NSData * imgData = [NSData dataWithContentsOfURL:imgUrl];
-            article.image = [UIImage imageWithData:imgData];
-        }
-        
         if([text count] > 0){
             article.text = [[NSString alloc] init];
             for(NSString * str in text){
                 article.text = [[article.text stringByAppendingString:str] stringByAppendingString:@"\n"];
             }
         }
-        [groups addObject:article];
+        
+        
+        if([currentImgTags count] > 0){
+            NSURL * imgUrl = [NSURL URLWithString:[currentImgTags objectAtIndex:0]];
+            NSData * imgData = [NSData dataWithContentsOfURL:imgUrl];
+            article.image = [UIImage imageWithData:imgData];
+            [groups addObject:article];
+        }
         
     }
     return groups;
