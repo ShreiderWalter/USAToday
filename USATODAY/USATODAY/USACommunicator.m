@@ -15,7 +15,7 @@
 @implementation USACommunicator
 
 -(void)fetchArticles:(int)number a:(NSString *)category{
-    NSString * urlAsString = [NSString stringWithFormat:[[@"http://api.usatoday.com/open/articles/topnews/" stringByAppendingString:category] stringByAppendingString:@"?count=%i&days=%i&page=%i&encoding=json&api_key=%@"], number, 1, PAGE_COUNT, API_KEY];
+    NSString * urlAsString = [NSString stringWithFormat:[[@"http://api.usatoday.com/open/articles/topnews/" stringByAppendingString:category] stringByAppendingString:@"?count=%i&days=%i&page=%i&encoding=json&api_key=%@"], number, 10, PAGE_COUNT, API_KEY];
     NSURL * url = [[NSURL alloc] initWithString:urlAsString];
     
     NSLog(@"%@", urlAsString);

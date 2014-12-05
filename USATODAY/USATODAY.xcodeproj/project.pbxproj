@@ -39,6 +39,7 @@
 		84A32C8E19FD743500035DC4 /* usa_today_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 84A32C8D19FD743500035DC4 /* usa_today_logo.png */; };
 		84A4202919F553BD0093FB29 /* LogoSplash.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A4202719F553BD0093FB29 /* LogoSplash.m */; };
 		84A4202A19F553BD0093FB29 /* LogoSplash.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84A4202819F553BD0093FB29 /* LogoSplash.xib */; };
+		84A4546F1A324267001F7ACF /* DisabledTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A4546E1A324267001F7ACF /* DisabledTextView.m */; };
 		84A9EDEE1A2E41ED0084532E /* google_images.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84A9EDED1A2E41ED0084532E /* google_images.jpg */; };
 		84A9EDF01A2E420F0084532E /* usa_today_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 84A9EDEF1A2E420F0084532E /* usa_today_logo.png */; };
 		84A9EDF21A2E42220084532E /* solid_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 84A9EDF11A2E42220084532E /* solid_white.png */; };
@@ -106,6 +107,8 @@
 		84A4202619F553BD0093FB29 /* LogoSplash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogoSplash.h; sourceTree = "<group>"; };
 		84A4202719F553BD0093FB29 /* LogoSplash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogoSplash.m; sourceTree = "<group>"; };
 		84A4202819F553BD0093FB29 /* LogoSplash.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LogoSplash.xib; sourceTree = "<group>"; };
+		84A4546D1A324267001F7ACF /* DisabledTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisabledTextView.h; sourceTree = "<group>"; };
+		84A4546E1A324267001F7ACF /* DisabledTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisabledTextView.m; sourceTree = "<group>"; };
 		84A9EDED1A2E41ED0084532E /* google_images.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = google_images.jpg; path = ../../../../../USAToday/USAToday/google_images.jpg; sourceTree = "<group>"; };
 		84A9EDEF1A2E420F0084532E /* usa_today_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = usa_today_logo.png; path = ../../../../../USAToday/USAToday/usa_today_logo.png; sourceTree = "<group>"; };
 		84A9EDF11A2E42220084532E /* solid_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = solid_white.png; path = ../../../../../USAToday/USAToday/solid_white.png; sourceTree = "<group>"; };
@@ -212,6 +215,8 @@
 				84A21E311A2CD767009099BE /* HTMLParser.h */,
 				84A21E321A2CD767009099BE /* HTMLParser.m */,
 				84A9EDF51A2E43050084532E /* MainStoryBoard.storyboard */,
+				84A4546D1A324267001F7ACF /* DisabledTextView.h */,
+				84A4546E1A324267001F7ACF /* DisabledTextView.m */,
 			);
 			path = USATODAY;
 			sourceTree = "<group>";
@@ -354,6 +359,7 @@
 				84A175591A21DF810018EBF6 /* USACommunicator.m in Sources */,
 				84A175531A21DBE40018EBF6 /* Article.m in Sources */,
 				84A1755C1A21EB9B0018EBF6 /* ArticleBuilder.m in Sources */,
+				84A4546F1A324267001F7ACF /* DisabledTextView.m in Sources */,
 				849C4F2F19E70A3400F0F2F2 /* AppDelegate.m in Sources */,
 				849C4F5019E70A5700F0F2F2 /* MainViewController.m in Sources */,
 				84A21E331A2CD767009099BE /* HTMLParser.m in Sources */,

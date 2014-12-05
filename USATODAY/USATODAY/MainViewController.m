@@ -20,6 +20,7 @@
     NSArray * _articles;
     USAManager * _manager;
     UIActivityIndicatorView * activityView;
+    int numberOfArticles;
 }
 @property(strong, nonatomic) NSMutableArray * array;
 @property (nonatomic)int num;
@@ -67,6 +68,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    numberOfArticles = 10;
     if(![self.navigationController isNavigationBarHidden]){
         [[self navigationController] setNavigationBarHidden:YES animated:NO];
     }
@@ -88,7 +90,7 @@
         _category = @"home";
     }
     
-    [_manager fetchArticles:10 a:_category];
+    [_manager fetchArticles:numberOfArticles a:_category];
     
     //[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(startFetchingGroups:) name:@"TestNotification" object:nil];
     
@@ -119,6 +121,15 @@
 
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView{
     //NSArray * windows = [[UIApplication sharedApplication] FEX_windows];
+}
+
+-(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+    float bottomEdge = scrollView.contentOffset.y + scrollView.frame.size.height;
+    if(bottomEdge >= scrollView.contentSize.height){
+        numberOfArticles += 10;
+        [_manager fetchArticles:numberOfArticles a:_category];
+        [activityView startAnimating];
+    }
 }
 
 -(BOOL)prefersStatusBarHidden{
@@ -162,7 +173,7 @@
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"SimpleTableCell" owner:self options:nil];
         cell = [nib objectAtIndex:0];
     }
-    
+    cell.titleTextView.userInteractionEnabled = NO;
     Article * article = _articles[indexPath.row];
     
     [cell.titleTextView setText:article.title];
