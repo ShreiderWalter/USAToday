@@ -21,6 +21,7 @@
     USAManager * _manager;
     UIActivityIndicatorView * activityView;
     int numberOfArticles;
+    BOOL enableToload;
 }
 @property(strong, nonatomic) NSMutableArray * array;
 @property (nonatomic)int num;
@@ -34,13 +35,9 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        enableToload = true;
         _category = @"home";
-        NSString * plusSign = @"\U00002795";
-        UIBarButtonItem * addButton = [[UIBarButtonItem alloc] initWithTitle:plusSign style:UIBarButtonItemStylePlain target:self action:@selector(addItemToArray)];
-        [addButton setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor blueColor]} forState:UIControlStateNormal];
-        self.navigationItem.rightBarButtonItem = addButton;
-        
-        
+                
         NSString * backArrayString = @"\U000025C0\U0000FE0E";
         UIBarButtonItem * delButton = [[UIBarButtonItem alloc] initWithTitle:backArrayString style:UIBarButtonItemStylePlain target:self action:@selector(delItemFromArray)];
         self.navigationItem.leftBarButtonItem = delButton;
@@ -58,6 +55,7 @@
         [activityView stopAnimating];
         self.mainImageView.image = viewImage;
        [self.tableList reloadData];
+        enableToload = true;
     });
 }
 
@@ -71,6 +69,7 @@
     numberOfArticles = 10;
     if(![self.navigationController isNavigationBarHidden]){
         [[self navigationController] setNavigationBarHidden:YES animated:NO];
+        enableToload = true;
     }
     
     activityView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
@@ -125,9 +124,10 @@
 
 -(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
     float bottomEdge = scrollView.contentOffset.y + scrollView.frame.size.height;
-    if(bottomEdge >= scrollView.contentSize.height){
-        numberOfArticles += 10;
-        [_manager fetchArticles:numberOfArticles a:_category];
+    if(bottomEdge >= scrollView.contentSize.height && enableToload){
+        enableToload = false;
+        //numberOfArticles += 10;
+        [_manager fetchArticles:[_articles count] + 10 a:_category];
         [activityView startAnimating];
     }
 }
